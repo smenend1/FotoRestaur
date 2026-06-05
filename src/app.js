@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentBase64 = null;
 
   // REEMPLAZAR ESTA URL CON TU URL REAL DE VERCEL CUANDO HAGAS EL DEPLOY
-  const VERCEL_BACKEND_URL = "https://TU_PROYECTO_DE_VERCEL.vercel.app/api/process-image";
+  const VERCEL_BACKEND_URL = "foto-restaura.vercel.app";
 
   fileInput.addEventListener('change', (event) => {
     const file = event.target.files[0];
