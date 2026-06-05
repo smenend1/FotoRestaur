@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic FX Studio</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#121212">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Cinematic FX Studio</h1>
+      <p class="subtitle">Estilo de video musical cálido y dorado</p>
+      <div id="connection-status" class="status-badge">Verificando...</div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Selecciona tu foto</h2>
+        <label for="image-input" class="custom-file-upload">
+          📁 Subir Imagen
+        </label>
+        <input type="file" id="image-input" accept="image/*">
+      </section>
+
+      <section class="card">
+        <h2>2. Procesamiento</h2>
+        <button id="process-btn" disabled>✨ Aplicar Estilo Cinemático</button>
+      </section>
+
+      <section class="card">
+        <h2>3. Guardar Resultado</h2>
+        <button id="download-btn" disabled>📥 Descargar Foto</button>
+      </section>
+
+      <div class="info-box">
+        <h3>Efectos aplicados activamente:</h3>
+        <ul>
+          <li>Fondo con desenfoque suave (Shallow Depth of Field).</li>
+          <li>Iluminación trasera dorada (Golden Rim Light).</li>
+          <li>Paleta cromática cálida (Amber/Gold Moody Tones).</li>
+        </ul>
+      </div>
+
+      <div class="canvas-container">
+        <div id="empty-state">Ninguna imagen cargada. Sube una foto para ver la vista previa aquí.</div>
+        <canvas id="main-canvas" class="hidden"></canvas>
+      </div>
+    </main>
+
+    <div id="loading-overlay" class="hidden">
+      <div class="spinner"></div>
+      <p>La IA está revelando tu foto cinemática... Por favor, espera.</p>
+    </div>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+</html>
